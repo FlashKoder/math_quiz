@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>5वीं कक्षा — गणित प्रश्नोत्तरी (हिन्दी)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="top">
+      <div class="logo">
+        <div class="logo-badge">5</div>
+        <div>
+          <h1>5वीं कक्षा — गणित प्रश्नोत्तरी</h1>
+          <p class="tag">हिन्दी में · हर प्रश्नोत्तरी 15 प्रश्न · 60 सेकंड प्रति प्रश्न</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Chapters -->
+    <main class="main">
+      <section id="chapter-screen" class="card">
+        <h2>अध्याय चुनें</h2>
+        <div class="chapters" id="chapters"></div>
+        <p class="hint">किसी अध्याय पर क्लिक करें — हर प्रश्नोत्तरी में 15 प्रश्न होंगे।</p>
+      </section>
+
+      <!-- Quiz -->
+      <section id="quiz-screen" class="card hidden">
+        <div class="quiz-header">
+          <div>
+            <div class="muted">अध्याय</div>
+            <div id="chapter-name" class="chapter-title">---</div>
+          </div>
+          <div class="center-info">
+            <div class="muted">प्रश्न</div>
+            <div id="qcount" class="big">1 / 15</div>
+          </div>
+          <div class="right-info">
+            <div class="muted">समय</div>
+            <div id="timer" class="big timer">60s</div>
+          </div>
+        </div>
+
+        <div class="progress-wrap">
+          <div id="progress" class="progress"></div>
+        </div>
+
+        <div id="question-card" class="question-card">
+          <div id="question-text" class="question-text">प्रश्न यहाँ दिखेगा</div>
+          <div id="options" class="options"></div>
+        </div>
+
+        <div class="quiz-footer">
+          <div class="score">स्कोर: <span id="live-score">0</span></div>
+          <div class="actions">
+            <button id="change-chapter" class="btn outline">अध्याय बदलें</button>
+            <button id="skip-btn" class="btn ghost">समय खत्म करें</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Result -->
+      <section id="result-screen" class="card hidden center">
+        <h2>क्विज़ पूरा हुआ!</h2>
+        <p id="final-score" class="final-score">आपका स्कोर: 0 / 15</p>
+        <p id="best-line" class="muted">सर्वश्रेष्ठ: -</p>
+        <div class="result-actions">
+          <button id="retry" class="btn">Retry</button>
+          <button id="back" class="btn outline">अध्याय चुनें</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+     <small>आओ मिलकर खेलें</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
